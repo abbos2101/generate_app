@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:generate_app/di.dart';
+import 'package:generate_app/di/di.dart';
 import 'package:generate_app/pages/insert/insert_page.dart';
 
 void main() async {

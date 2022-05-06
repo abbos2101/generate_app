@@ -2,11 +2,20 @@ part of 'insert_bloc.dart';
 
 @freezed
 abstract class InsertState with _$InsertState {
-  const factory InsertState.initial() = _Initial;
+  const factory InsertState.loading({
+    @Default(0) int categoryIndex,
+    @Default([]) List<CategoryModel> categories,
+  }) = _loading;
 
-  const factory InsertState.loading() = _Loading;
+  const factory InsertState.fail({
+    @Default(0) int categoryIndex,
+    @Default("") String message,
+    @Default([]) List<CategoryModel> categories,
+  }) = _fail;
 
-  const factory InsertState.fail(String message) = _Fail;
-
-  const factory InsertState.success(String message) = _Success;
+  const factory InsertState.success({
+    @Default(0) int categoryIndex,
+    @Default("") String message,
+    @Default([]) List<CategoryModel> categories,
+  }) = _success;
 }
